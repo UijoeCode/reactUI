@@ -1,0 +1,39 @@
+[data-scope-rui] {
+    *, ::after, ::before {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        color: rgba(0, 0, 0, .9)
+    }
+    header {
+        background-color:rgba(0, 0, 0, .9);
+        color:rgba(255, 255, 255, .8);
+        padding: calc(6px + 1vmin) 5vmin;
+        img {width: calc(30px + 4vmin); max-width: 100px}
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #ccc;
+        padding: calc(3px + 1vmin) 5vmin;
+    }
+    .container {max-width: 1500px; padding: 18px 18px 200px 18px; margin: auto}
+
+    section {
+        position: relative;
+        padding: calc(6px + 1vmin) 1vmin;
+        border-top: solid 1px #ddd;
+        border-bottom: solid 1px #ddd;
+        &:not(:last-of-type) {border-bottom-width: 0}
+        h2, div {padding: calc(6px + 1vmin) 0}
+        h2 {font-size: 1.4em; font-weight: 400; color: rgba(0, 0, 0, .7)}
+        .options {background-color: #eee}
+    }
+
+    @media screen and (min-width: 1000px) {
+        section {display: flex}
+        h2 {width: 22%; min-width: 180px}
+        .content {padding-right: 6vmin}
+        .options {position: absolute; top: 0;right: 0}
+    }
+}
